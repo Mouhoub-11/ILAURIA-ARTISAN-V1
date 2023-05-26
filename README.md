@@ -1,2 +1,3 @@
 # ILAURIA-ARTISAN-V1
-ILAURIA ARTISAN project's published code.
+<b>ILAURIA ARTISAN</b> project's published code.
+#Projet fin de cycle (Licence 3)
