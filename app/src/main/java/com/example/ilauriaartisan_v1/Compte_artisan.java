@@ -2,7 +2,6 @@ package com.example.ilauriaartisan_v1;
 
 
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -120,7 +119,7 @@ public class Compte_artisan extends AppCompatActivity {
         }
     }
 
-}
+
     public void setCarousel() {
 
         for (int i = 0; i < 10; i++) {
