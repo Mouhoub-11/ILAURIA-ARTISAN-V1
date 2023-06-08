@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/menuBarLayout"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:background="@color/greySurface"
+            app:menu="@menu/top_app_bar"
+
+            app:title="@string/page_title"
+            app:titleCentered="true"
+
+            app:navigationIcon="@drawable/menu"
+            app:titleTextColor="#1B1B1F"
+
+            >
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Note: A RecyclerView can also be used -->
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/menuBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+
+
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="Voir les avis"
+            android:text="Voir les avis"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey3"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="Voir hitorique"
+            android:text="Voir historique"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey3"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Voir "
+            android:text="Se décconnecter"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey3"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="72dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Widget.Material3.Button.IconButton"
+        app:srcCompat="@drawable/baseline_account_circle_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_profile_picture_button"
+        android:contentDescription="@string/editProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/baseline_edit"
+        app:tint="@color/blueSecondaire"
+
+
+        app:backgroundTint="@color/greySurface"
+
+        app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+        app:layout_constraintEnd_toEndOf="@id/profile_picture"
+
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+
+        />
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profilName"
+
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/profile_picture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="4dp"
+
+
+        />
+
+    <LinearLayout
+        android:id="@+id/textCharmant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+
+        app:layout_constraintTop_toBottomOf="@+id/profil"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="4dp"
+
+        >
+
+        <TextView
+            android:id="@+id/bj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour"
+
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+
+            android:layout_marginTop="4dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="4dp"
+
+            />
+
+        <TextView
+            android:id="@+id/X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="personne"
+
+            android:textColor="@color/bluePrincipal"
+            android:textSize="16sp"
+
+
+            android:layout_marginTop="4dp"
+
+            android:paddingStart="0dp"
+            android:paddingEnd="4dp"
+
+            />
+
+        <TextView
+            android:id="@+id/txtt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nous sommes heureux de vous revoir"
+
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+
+            android:layout_marginTop="4dp"
+
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/descProfil"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toBottomOf="@+id/textCharmant"
+
+        android:background="#EBE9F6"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+
+
+        >
+
+        <TextView
+            android:id="@+id/descTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:padding="16dp"
+            android:text="@string/descTitle"
+
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/descText"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="14dp"
+            android:text="@string/desc"
+
+
+            android:textColor="@color/grey2"
+            android:textSize="16sp"
+
+            />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_profile_desc_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/editDesc"
+            app:backgroundTint="@color/greySurface"
+
+
+            app:fabSize="mini"
+
+
+            app:srcCompat="@drawable/baseline_edit"
+
+            app:tint="@color/blueSecondaire"
+
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/descProfil"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+
+
+        >
+
+        <TextView
+            android:id="@+id/Travail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="14dp"
+            android:text="@string/travailTitle"
+
+
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_weight="@android:integer/config_longAnimTime"
+
+            />
+        <ImageButton
+            android:id="@+id/my_button"
+            android:contentDescription="@string/cameraBtnDesc"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:src="@drawable/camera"
+            android:background="@android:color/transparent"
+
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="end"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
