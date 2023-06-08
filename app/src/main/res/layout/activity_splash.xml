@@ -1,0 +1,47 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Splash">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/splashnom"
+        android:layout_alignParentTop="true"
+
+
+        android:contentDescription="@string/desclogo"
+        android:src="@drawable/ilaurialogo"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="164dp"
+
+        />
+
+    <TextView
+        android:id="@+id/splashnom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:text="@string/ILAURIA"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/bluePrincipal"
+        android:textSize="27sp"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        android:layout_marginTop="32dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
