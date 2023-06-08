@@ -101,6 +101,8 @@
         android:layout_width="264dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        app:iconGravity="textStart"
+        app:iconPadding="4dp"
         android:contentDescription="@string/extended_fab_content_desc"
 
 
@@ -116,8 +118,7 @@
         app:layout_constraintRight_toRightOf="parent"
 
 
-        app:layout_constraintTop_toBottomOf="@id/bienvenueText" />
-
+        app:layout_constraintTop_toBottomOf="@id/bienvenueText"/>
     <Button
         android:id="@+id/plustardBtn"
         android:layout_width="wrap_content"

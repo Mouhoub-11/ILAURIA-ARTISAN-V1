@@ -26,7 +26,7 @@
             android:layout_height="?attr/actionBarSize"
 
             android:background="@color/greySurface"
-            app:menu="@menu/top_app_bar"
+
 
             app:title="@string/page_title"
             app:titleCentered="true"
@@ -43,41 +43,7 @@
 
     <!-- Note: A RecyclerView can also be used -->
 
-    <LinearLayout
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/menuBarLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical"
 
-
-        >
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:contentDescription="Voir les avis"
-            android:text="Voir les avis"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/grey3"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:contentDescription="Voir hitorique"
-            android:text="Voir historique"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/grey3"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="Voir "
-            android:text="Se décconnecter"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/grey3"/>
-
-    </LinearLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profile_picture"
@@ -286,17 +252,18 @@
             android:id="@+id/Travail"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="@android:integer/config_longAnimTime"
             android:paddingStart="16dp"
             android:paddingTop="16dp"
             android:paddingEnd="14dp"
+
+
             android:text="@string/travailTitle"
-
-
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:layout_weight="@android:integer/config_longAnimTime"
 
             />
+
         <ImageButton
             android:id="@+id/my_button"
             android:contentDescription="@string/cameraBtnDesc"
@@ -312,10 +279,26 @@
             />
 
 
+
     </LinearLayout>
 
 
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout2">
+
+        <LinearLayout
+            android:id="@+id/carousel_profil_artisent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
 
 
 
