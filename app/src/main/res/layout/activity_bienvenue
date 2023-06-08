@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bienvenue">
+
+
+    <TextView
+        android:id="@+id/ss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center"
+        android:text="@string/commençons"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        >
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/idimg2"
+        android:layout_width="400dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/trois"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ss"
+
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+
+        style="?attr/materialButtonOutlinedStyle"
+
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+
+        android:backgroundTint="@color/bluePrincipal"
+
+        android:contentDescription="Trouver un artisan"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+
+
+        android:text="Trouver un artisan"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+
+        app:elevation="0dp"
+        app:layout_constraintHorizontal_bias="0.495"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idimg2"
+        app:strokeColor="@color/bluePrincipal" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btn2"
+
+        style="?attr/materialButtonOutlinedStyle"
+
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:contentDescription="Trouver un artisan"
+
+        android:text="Je suis un professionnel"
+
+
+        android:textColor="@color/bluePrincipal"
+        android:textSize="14sp"
+        app:elevation="0dp"
+
+
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@id/extended_fab"
+        app:strokeColor="@color/grey2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
