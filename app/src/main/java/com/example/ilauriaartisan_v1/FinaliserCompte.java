@@ -14,6 +14,8 @@ import android.widget.ImageView;
 
 public class FinaliserCompte extends AppCompatActivity {
 
+    private static final int REQUEST_PERMISSION = 1;
+    private Button galleryButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

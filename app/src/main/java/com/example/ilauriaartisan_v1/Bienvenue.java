@@ -1,4 +1,4 @@
-package com.example.authentification;
+package com.example.ilauriaartisan_v1;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -6,4 +6,137 @@
     android:layout_height="match_parent"
     tools:context=".FinaliserCompte">
 
+    <ImageView
+        android:id="@+id/logo_ilauria"
+        android:contentDescription="@string/logoDesc"
+        android:layout_width="70dp"
+        android:layout_height="66dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/finaliserText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/finaliser"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_ilauria"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finaliserText"
+        app:shapeAppearanceOverlay="@style/Widget.Material3.Button.IconButton"
+        app:srcCompat="@drawable/baseline_account_circle_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_profile_picture_button"
+        android:contentDescription="@string/editProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/baseline_edit"
+        app:tint="@color/blueSecondaire"
+
+
+        app:backgroundTint="@color/greySurface"
+
+        app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+        app:layout_constraintEnd_toEndOf="@id/profile_picture"
+
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/bienvenueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenue"
+
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/profile_picture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="4dp"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+
+        style="?attr/materialButtonOutlinedStyle"
+
+        app:strokeColor="@color/bluePrincipal"
+        android:textColor="@color/black"
+
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/extended_fab_content_desc"
+
+
+
+        android:text="@string/extended_fab_label"
+        android:textSize="14sp"
+        app:elevation="0dp"
+        app:icon="@drawable/camera"
+
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@id/bienvenueText" />
+
+    <Button
+        android:id="@+id/plustardBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/bluePrincipal"
+
+        android:contentDescription="@string/plusTardBtnDesc"
+
+        android:text="@string/plusTard"
+
+
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

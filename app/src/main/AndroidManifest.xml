@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -20,6 +23,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Compte_artisan"
+            android:exported="false" />
+        <activity
+            android:name=".FinaliserCompte"
+            android:exported="false" />
+        <activity
+            android:name=".CreationCompte3"
+            android:exported="false" />
+        <activity
+            android:name=".CreationCompte2"
+            android:exported="false" />
+        <activity
+            android:name=".CreationCompte1"
+            android:exported="false" />
+        <activity
+            android:name=".Authentification"
+            android:exported="false" />
+        <activity
+            android:name=".Categorie"
+            android:exported="false" />
+        <activity
+            android:name=".CustomListView"
+            android:exported="false" />
+        <activity
+            android:name=".Bienvenue"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
+            android:exported="true"/>
+
     </application>
 
 </manifest>
