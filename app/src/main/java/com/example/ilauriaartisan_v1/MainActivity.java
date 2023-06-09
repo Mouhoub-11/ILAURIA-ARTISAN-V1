@@ -4,26 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button Bienvenue1 ;
+    private Button BtnArtisan ;
     protected void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Bienvenue1=(Button) findViewById(R.id.btn2);
-        Bienvenue1.setOnClickListener(v -> {
+        BtnArtisan = (ExtendedFloatingActionButton) findViewById(R.id.btn2);
+        BtnArtisan.setOnClickListener(ok);
+    }
 
-        });
-        View.OnClickListener on=new View.OnClickListener() {
+        View.OnClickListener ok=new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent B1=new Intent(MainActivity.this,Authentification.class);
+                Intent B1=new Intent(MainActivity.this, Authentification.class);
                 startActivity(B1);
             } };
+
     }
-}

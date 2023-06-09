@@ -3,7 +3,6 @@ package com.example.ilauriaartisan_v1;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -45,7 +44,7 @@ public class Compte_artisan extends AppCompatActivity {
     LinearLayout carousel;
     ImageView images;
 
-    private ImageButton my_button;
+    private ImageButton cameraBtn;
 
 
     @Override
@@ -56,22 +55,21 @@ public class Compte_artisan extends AppCompatActivity {
 
         carousel = (LinearLayout) findViewById(R.id.carousel_profil_artisent);
 
-
-        carousel = (LinearLayout) findViewById(R.id.carousel_profil_artisent);
+        cameraBtn = (ImageButton) findViewById(R.id.my_button);
 
 
 
         setCarousel();
 
-        my_button.setOnClickListener(new View.OnClickListener() {
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkPermissionAndOpenGallery();
 
-                Intent iGallery = new Intent(Intent.ACTION_PICK);
-                iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(iGallery, GALLERY_REQ_CODE);
-
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                startActivity(Intent.createChooser(intent, "Select Pictures"));
             }
 
         });
@@ -128,9 +126,7 @@ public class Compte_artisan extends AppCompatActivity {
             images.setScaleType(ImageView.ScaleType.FIT_START);
             images.setPadding(0, 0, 8, 0);
 
-
             carousel.addView(images);
-
 
         }
 

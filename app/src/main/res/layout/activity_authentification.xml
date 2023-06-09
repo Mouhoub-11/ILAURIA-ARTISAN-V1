@@ -40,7 +40,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp">
 
 
@@ -66,17 +65,15 @@
 
                 />
         </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Champ obligatoire*"
+            android:textColor="#ff0000"
+            android:id="@+id/champemail"
+            android:layout_marginBottom="8dp"
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
-
-
+            />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -93,17 +90,16 @@
                 android:inputType="textPassword"
 
 
+
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/champmdp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Champ obligatoire*"
+            android:textColor="#ff0000" />
 
         <Button
             android:id="@+id/button3"
@@ -118,31 +114,17 @@
             android:textSize="14sp">
 
         </Button>
-
-        <LinearLayout
+        <Button
+            android:id="@+id/btnsidentifier"
+            style="@style/Widget.Material3.Button"
+            android:textSize="16dp"
             android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btnsidentifier"
-                style="@style/Widget.Material3.Button"
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S'identifier"
-                android:backgroundTint="#1976D2"
-                />
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:orientation="vertical">
-
+            android:layout_height="wrap_content"
+            android:text="S'identifier"
+            android:backgroundTint="#1976D2"
+            android:onClick="Verfier"
+            android:layout_marginBottom="23dp"
+            />
         <Button
             android:id="@+id/btnsincrire"
             style="@style/Widget.Material3.Button.OutlinedButton"
@@ -153,35 +135,21 @@
 
             app:strokeColor="@color/bluePrincipal"
             android:textColor="@color/black"
+            android:layout_marginBottom="15dp"
             />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="58dp"
-        android:orientation="vertical"
-        android:layout_gravity="center">
-
         <ImageView
 
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/group_2"
+            android:layout_marginBottom="15dp"
 
 
             >
 
+
         </ImageView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
 
         <Button
             android:id="@+id/button6"
@@ -198,9 +166,10 @@
 
             app:strokeColor="@color/bluePrincipal"
             />
+
     </LinearLayout>
 
-
 </LinearLayout>
+
 
 

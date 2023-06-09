@@ -15,7 +15,6 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 
-
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,10 +29,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class FinaliserCompte extends AppCompatActivity {
@@ -44,6 +43,8 @@ public class FinaliserCompte extends AppCompatActivity {
     private FloatingActionButton galleryButton;
     private ImageView imageView;
 
+    private Button plusTard;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,17 @@ public class FinaliserCompte extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.profile_picture);
 
         galleryButton = (FloatingActionButton) findViewById(R.id.edit_profile_picture_button);
+
+        plusTard = (Button) findViewById(R.id.plustardBtn);
+
+        plusTard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent B2=new Intent(FinaliserCompte.this, Compte_artisan.class);
+                startActivity(B2);
+            }
+        });
+
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +74,14 @@ public class FinaliserCompte extends AppCompatActivity {
                 iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(iGallery, GALLERY_REQ_CODE );
 
+            }
+        });
+
+        plusTard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v2) {
+                Intent B2=new Intent(FinaliserCompte.this, Compte_artisan.class);
+                startActivity(B2);
             }
         });
 

@@ -284,6 +284,7 @@
 
 
     <HorizontalScrollView
+        android:contentDescription="caroussel photos artisan"
         android:layout_width="0dp"
         android:layout_height="480dp"
         android:layout_marginTop="8dp"
