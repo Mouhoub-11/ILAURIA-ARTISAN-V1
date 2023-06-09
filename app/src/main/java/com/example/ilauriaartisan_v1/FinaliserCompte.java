@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import android.Manifest;
@@ -43,7 +44,10 @@ public class FinaliserCompte extends AppCompatActivity {
     private FloatingActionButton galleryButton;
     private ImageView imageView;
 
+    private ExtendedFloatingActionButton cameraBtn;
+
     private Button plusTard;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,20 @@ public class FinaliserCompte extends AppCompatActivity {
 
         plusTard = (Button) findViewById(R.id.plustardBtn);
 
+        cameraBtn = (ExtendedFloatingActionButton) findViewById(R.id.extended_fab);
+
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkPermissionAndOpenGallery();
+
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                startActivity(Intent.createChooser(intent, "Select Pictures"));
+            }
+
+        });
         plusTard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

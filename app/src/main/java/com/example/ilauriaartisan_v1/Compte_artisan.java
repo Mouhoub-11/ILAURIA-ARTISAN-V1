@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -40,11 +41,14 @@ public class Compte_artisan extends AppCompatActivity {
     private static final int REQUEST_PERMISSION = 1;
     private static final int REQUEST_IMAGE_GALLERY = 2;
     private static final int GALLERY_REQ_CODE = 1000;
+    private Button deconnecter,voiravis;
 
     LinearLayout carousel;
     ImageView images;
 
     private ImageButton cameraBtn;
+    int m=0;
+
 
 
     @Override
@@ -57,6 +61,28 @@ public class Compte_artisan extends AppCompatActivity {
 
         cameraBtn = (ImageButton) findViewById(R.id.my_button);
 
+        deconnecter =  findViewById(R.id.menucedeconnecter);
+        voiravis =  findViewById(R.id.menuvoiravis);
+        deconnecter.setVisibility(View.GONE);
+        voiravis.setVisibility(View.GONE);
+
+
+        Toolbar toolbar = findViewById(R.id.topAppBar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (m==0){
+                    deconnecter.setVisibility(View.VISIBLE);
+                    voiravis.setVisibility(View.VISIBLE);
+                    m=1;
+                }else{
+                    deconnecter.setVisibility(View.GONE);
+                    voiravis.setVisibility(View.GONE);
+                    m=0;
+                }
+
+            }
+        });
 
 
         setCarousel();
@@ -131,6 +157,15 @@ public class Compte_artisan extends AppCompatActivity {
         }
 
     }
+    public void sedeconnecter (View view){
+        Intent i=new Intent(Compte_artisan.this,Bienvenue.class);
+        startActivity(i);
+    }
+    // bouton voir avis menu
+    /*public void voiravis (View view){
+        Intent i=new Intent(Compte_artisan.this,avis.class);
+        startActivity(i);
+    }*/
 
 }
 

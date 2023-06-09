@@ -72,5 +72,12 @@
     <string name="desclogo">logo</string>
 
     <string name="commençons">Commençons !</string>
+    <string name="metier">metier</string>
+    <string-array name="planets_array">
+        <item>peintre</item>
+        <item>mecanicien</item>
+        <item>couturier</item>
+        <item>macon</item>
+    </string-array>
 
 </resources>

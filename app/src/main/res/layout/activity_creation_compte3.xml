@@ -44,20 +44,28 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:background="@drawable/background_input"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingLeft="16dp"
-        android:paddingTop="8dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="8dp">
 
-        <EditText
-            android:id="@+id/creation_compte_username"
+        android:paddingRight="16dp"
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/metier"
+            android:text="@string/metier"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            />
+        <Spinner
+            android:contentDescription="fhkzjhfk"
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Métier" />
+
+            />
+
     </LinearLayout>
 
     <LinearLayout
@@ -87,8 +95,15 @@
             android:hint="Description de votre traville"
             android:inputType="textPersonName"
             android:textSize="16dp" />
-    </LinearLayout>
 
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Champ obligatoire*"
+        android:textColor="#ff0000"
+        android:id="@+id/champdesc5"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -116,6 +131,7 @@
             android:textColor="@color/white"
             android:textSize="20dp"
             app:strokeColor="#1976D2"
+            android:onClick="suivant3"
 
             />
     </LinearLayout>

@@ -42,7 +42,38 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Note: A RecyclerView can also be used -->
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/menuBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
 
+
+
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="Voir les avis"
+            android:text="Voir les avis"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey3"
+            android:id="@+id/menuvoiravis"
+            android:onClick="voiravis"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Voir "
+            android:text="Se décconnecter"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey3"
+            android:id="@+id/menucedeconnecter"
+            android:onClick="sedeconnecter"/>
+
+    </LinearLayout>
 
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -250,7 +281,7 @@
 
         <TextView
             android:id="@+id/Travail"
-            android:layout_width="0dp"
+            android:layout_width="340dp"
             android:layout_height="match_parent"
             android:layout_weight="@android:integer/config_longAnimTime"
             android:paddingStart="16dp"
@@ -292,6 +323,7 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/layout2">
 
         <LinearLayout
@@ -304,3 +336,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
