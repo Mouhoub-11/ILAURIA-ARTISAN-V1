@@ -29,7 +29,7 @@
             android:background="@color/greySurface"
             app:menu="@menu/top_app_bar"
 
-            app:title="Compte Client"
+            app:title="Compte Artisan"
             app:titleCentered="true"
 
             app:navigationIcon="@drawable/menu"
@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Liste des artisans favoris"
+        android:text="Liste des avis"
 
         android:textColor="@color/black"
         android:textSize="20sp"

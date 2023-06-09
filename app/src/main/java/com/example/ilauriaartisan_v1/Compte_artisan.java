@@ -122,11 +122,18 @@ public class Compte_artisan extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == RESULT_OK) {
-
-            if (requestCode == GALLERY_REQ_CODE) {
-
-                images.setImageURI(data.getData());
+        if (requestCode == GALLERY_REQ_CODE && resultCode == RESULT_OK) {
+            if (data.getClipData() != null) {
+                // Multiple images selected
+                int count = data.getClipData().getItemCount();
+                for (int i = 0; i < count; i++) {
+                    Uri imageUri = data.getClipData().getItemAt(i).getUri();
+                    // Process each selected image URI as desired
+                }
+            } else if (data.getData() != null) {
+                // Single image selected
+                Uri imageUri = data.getData();
+                // Process the selected image URI as desired
             }
         }
     }

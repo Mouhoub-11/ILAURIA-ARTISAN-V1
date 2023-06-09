@@ -12,7 +12,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button BtnArtisan ;
+    private Button BtnArtisan, BtnAllerCategorie ;
     protected void onCreate(Bundle savedInstanceState) {
 
 
@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BtnArtisan = (ExtendedFloatingActionButton) findViewById(R.id.btn2);
         BtnArtisan.setOnClickListener(ok);
+
+        BtnAllerCategorie = (ExtendedFloatingActionButton) findViewById(R.id.extended_fab);
+        BtnAllerCategorie.setOnClickListener(ok2);
+
     }
 
         View.OnClickListener ok=new View.OnClickListener() {
@@ -29,4 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(B1);
             } };
 
-    }
+    View.OnClickListener ok2=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent B11=new Intent(MainActivity.this, Categorie.class);
+            startActivity(B11);
+        } };
+
+
+}

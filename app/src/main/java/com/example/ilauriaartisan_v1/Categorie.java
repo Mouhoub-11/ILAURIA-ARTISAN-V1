@@ -35,6 +35,7 @@ public class Categorie extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categorie);
         listView= (ListView) findViewById(R.id.customListView);
+
         ArtisantAdapter artisantAdapter=new ArtisantAdapter(getApplicationContext(),Listartisant,Listimage);
         listView.setAdapter(artisantAdapter);
 

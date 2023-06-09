@@ -135,6 +135,22 @@ public class FinaliserCompte extends AppCompatActivity {
                 imageView.setImageURI(data.getData());
             }
         }
+
+
+        if (requestCode == GALLERY_REQ_CODE && resultCode == RESULT_OK) {
+            if (data.getClipData() != null) {
+                // Multiple images selected
+                int count = data.getClipData().getItemCount();
+                for (int i = 0; i < count; i++) {
+                    Uri imageUri = data.getClipData().getItemAt(i).getUri();
+                    // Process each selected image URI as desired
+                }
+            } else if (data.getData() != null) {
+                // Single image selected
+                Uri imageUri = data.getData();
+                // Process the selected image URI as desired
+            }
+        }
     }
 
     @Override
