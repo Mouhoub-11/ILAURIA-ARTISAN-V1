@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item android:showAsAction="always|withText" android:icon="@android:drawable/ic_menu_edit"
+        android:id="@+id/btnSeDeco" android:title="cat-4"></item>
+
+</menu>
