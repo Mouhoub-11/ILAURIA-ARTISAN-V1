@@ -46,6 +46,8 @@ public class Compte_artisan extends AppCompatActivity {
 
 
 
+
+
     private ImageView imageView;
 
 
@@ -124,6 +126,17 @@ public class Compte_artisan extends AppCompatActivity {
                 intent.setType("image/*");
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 startActivity(Intent.createChooser(intent, "Select Pictures"));
+            }
+
+        });
+
+
+
+        voiravis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent B5=new Intent(Compte_artisan.this,AvisArtisanInterface.class);
+                startActivity(B5);
             }
 
         });
