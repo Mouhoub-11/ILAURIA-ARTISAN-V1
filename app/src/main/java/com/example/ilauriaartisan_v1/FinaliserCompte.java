@@ -64,6 +64,7 @@ public class FinaliserCompte extends AppCompatActivity {
         cameraBtn = (ExtendedFloatingActionButton) findViewById(R.id.extended_fab);
 
         cameraBtn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 checkPermissionAndOpenGallery();

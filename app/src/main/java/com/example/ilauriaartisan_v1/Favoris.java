@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -91,9 +92,14 @@ public class Favoris extends AppCompatActivity {
 
 
 
+
+
+
         galleryButton = (FloatingActionButton) findViewById(R.id.edit_profile_picture_button);
 
         Toolbar toolbar=findViewById(R.id.topAppBar);
+
+        imageView = (ImageView) findViewById(R.id.profile_picture);
 
 
         /////////recycler
@@ -138,17 +144,18 @@ public class Favoris extends AppCompatActivity {
             }
         });
 
+
+
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkPermissionAndOpenGallery();
 
-                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-                intent.setType("image/*");
-                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-                startActivity(Intent.createChooser(intent, "Select Pictures"));
-            }
+                Intent iGallery = new Intent(Intent.ACTION_PICK);
+                iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(iGallery, GALLERY_REQ_CODE );
 
+            }
         });
 
 

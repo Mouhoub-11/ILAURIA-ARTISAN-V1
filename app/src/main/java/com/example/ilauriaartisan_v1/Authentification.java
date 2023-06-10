@@ -55,7 +55,7 @@ public class Authentification extends AppCompatActivity {
    View.OnClickListener on =new View.OnClickListener() {
        @Override
        public void onClick(View view) {
-           Intent i=new Intent(Authentification.this,Compte_artisan.class);
+           Intent i=new Intent(Authentification.this,Favoris.class);
            startActivity(i);
 
        } };
