@@ -56,10 +56,9 @@
     <TextView
         android:id="@+id/champrecup"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:text="champ obligatoire*"
         android:textColor="#ff0000"
-        android:layout_marginTop="8dp"
 
 
         ></TextView>
@@ -72,6 +71,7 @@
         android:text="Envoyer "
         android:backgroundTint="#1976D2"
         android:layout_gravity="right"
+        android:layout_marginTop="8dp"
 
         >
 
