@@ -19,7 +19,7 @@
     </ImageView>
 
     <TextView
-        android:id="@+id/tcode"
+        android:id="@+id/txtVerifCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -60,7 +60,7 @@
         >
 
         <EditText
-            android:id="@+id/e1"
+            android:id="@+id/champs1"
             style="@style/CenteredHintEditText"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -71,7 +71,7 @@
         </EditText>
 
         <EditText
-            android:id="@+id/e2"
+            android:id="@+id/champs2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
@@ -83,7 +83,7 @@
         </EditText>
 
         <EditText
-            android:id="@+id/e3"
+            android:id="@+id/champs3"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
@@ -95,7 +95,7 @@
         </EditText>
 
         <EditText
-            android:id="@+id/e4"
+            android:id="@+id/champs4"
             style="@style/CenteredHintEditText"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -108,7 +108,7 @@
         </EditText>
 
         <EditText
-            android:id="@+id/e5"
+            android:id="@+id/champs5"
             style="@style/CenteredHintEditText"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -120,7 +120,7 @@
 
 
         <EditText
-            android:id="@+id/e6"
+            android:id="@+id/champs6"
             style="@style/CenteredHintEditText"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -134,7 +134,7 @@
 
 
     <Button
-        android:id="@+id/btnc"
+        android:id="@+id/btnReessayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
