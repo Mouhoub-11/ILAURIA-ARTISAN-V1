@@ -43,11 +43,22 @@ public class Compte_artisan extends AppCompatActivity {
     private static final int GALLERY_REQ_CODE = 1000;
     private Button deconnecter,voiravis;
 
+
+
+
+    private ImageView imageView;
+
+
+
     LinearLayout carousel;
     ImageView images;
 
     private ImageButton cameraBtn;
     int m=0;
+
+    private FloatingActionButton galleryButton;
+
+
 
 
 
@@ -65,6 +76,10 @@ public class Compte_artisan extends AppCompatActivity {
         voiravis =  findViewById(R.id.menuvoiravis);
         deconnecter.setVisibility(View.GONE);
         voiravis.setVisibility(View.GONE);
+
+
+
+        galleryButton = (FloatingActionButton) findViewById(R.id.edit_profile_picture_button);
 
 
         Toolbar toolbar = findViewById(R.id.topAppBar);
@@ -87,6 +102,19 @@ public class Compte_artisan extends AppCompatActivity {
 
         setCarousel();
 
+        galleryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkPermissionAndOpenGallery();
+
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                startActivity(Intent.createChooser(intent, "Select Pictures"));
+            }
+
+        });
+
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +127,10 @@ public class Compte_artisan extends AppCompatActivity {
             }
 
         });
+
+
+
+
     }
 
     private void checkPermissionAndOpenGallery() {
@@ -121,6 +153,15 @@ public class Compte_artisan extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+
+            if (requestCode == GALLERY_REQ_CODE) {
+
+                imageView.setImageURI(data.getData());
+            }
+        }
+
 
         if (requestCode == GALLERY_REQ_CODE && resultCode == RESULT_OK) {
             if (data.getClipData() != null) {

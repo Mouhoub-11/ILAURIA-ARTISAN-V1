@@ -106,6 +106,7 @@ public class FinaliserCompte extends AppCompatActivity {
 
     }
 
+
     private void checkPermissionAndOpenGallery() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {

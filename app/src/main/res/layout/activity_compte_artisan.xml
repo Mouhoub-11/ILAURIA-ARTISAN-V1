@@ -232,13 +232,14 @@
 
             />
 
-        <TextView
+
+        <EditText
             android:id="@+id/descText"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="14dp"
-            android:text="@string/desc"
+            android:layout_height="match_parent"
+            android:hint="fhsvwvl"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
 
 
             android:textColor="@color/grey2"
@@ -247,24 +248,6 @@
             />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/edit_profile_desc_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="4dp"
-            android:contentDescription="@string/editDesc"
-            app:backgroundTint="@color/greySurface"
-
-
-            app:fabSize="mini"
-
-
-            app:srcCompat="@drawable/baseline_edit"
-
-            app:tint="@color/blueSecondaire"
-
-            android:layout_gravity="end"/>
 
     </LinearLayout>
 

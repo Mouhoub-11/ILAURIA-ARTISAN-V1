@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener ok2=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent B11=new Intent(MainActivity.this, Categorie.class);
+            Intent B11=new Intent(MainActivity.this, Favoris.class);
             startActivity(B11);
         } };
 

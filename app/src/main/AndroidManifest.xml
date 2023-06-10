@@ -51,9 +51,6 @@
             android:name=".Categorie"
             android:exported="true" />
         <activity
-            android:name=".CustomListView"
-            android:exported="true" />
-        <activity
             android:name=".Bienvenue"
             android:exported="true" />
         <activity
