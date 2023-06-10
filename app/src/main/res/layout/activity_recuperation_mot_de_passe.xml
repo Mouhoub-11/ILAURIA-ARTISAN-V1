@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#FFF"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="86dp"
+        android:layout_gravity="center"
+        android:id="@+id/logo"
+        android:src="@drawable/logo">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Verification code"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/INFOTEXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Veuillez saisir le code de confirmation envoyé sur votre email"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/e1"
+            style="@style/CenteredHintEditText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:hint="*"
+            android:inputType="number">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/e2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:inputType="number"
+            android:hint="*"
+            style="@style/CenteredHintEditText"
+            >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/e3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:inputType="number"
+            android:hint="*"
+            style="@style/CenteredHintEditText"
+            >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/e4"
+            style="@style/CenteredHintEditText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:hint="*"
+            android:inputType="number">
+
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/e5"
+            style="@style/CenteredHintEditText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:hint="*"
+            android:inputType="number">
+
+</EditText>
+
+
+        <EditText
+            android:id="@+id/e6"
+            style="@style/CenteredHintEditText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:hint="*"
+            android:inputType="number">
+
+        </EditText>
+
+</LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#FFF"
+        android:onClick="v"
+        android:text="Code incorrecte,réessayer "
+        android:textColor="#FF0000"
+        >
+
+</Button>
+
+
+<Button
+android:id="@+id/btne"
+android:layout_width="343dp"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginTop="48dp"
+android:backgroundTint="#FFF"
+android:onClick="recup"
+android:text="Je n'ai pas recu, renvoyez"
+android:textColor="#FF0000"
+
+    >
+
+</Button>
+
+<Button
+android:id="@+id/btnr"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="right"
+android:backgroundTint="#1976D2"
+android:onClick="recup"
+android:text="Envoyer "
+android:layout_marginTop="48dp"
+    >
+
+</Button>
+
+    </LinearLayout>
