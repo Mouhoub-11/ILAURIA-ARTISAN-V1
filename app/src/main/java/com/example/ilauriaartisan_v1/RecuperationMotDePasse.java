@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class RecuperationMotDePasse extends AppCompatActivity {
     private Button btnRessai;
-    private EditText t1,t2,t3,t4,t5,t6;
+    private EditText t1,t2,t3,t4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,7 @@ public class RecuperationMotDePasse extends AppCompatActivity {
         t2=findViewById(R.id.champs2);
         t3=findViewById(R.id.champs3);
         t4=findViewById(R.id.champs4);
-        t5=findViewById(R.id.champs5);
-        t6=findViewById(R.id.champs6);
+
 
 
     }
@@ -37,10 +36,9 @@ public class RecuperationMotDePasse extends AppCompatActivity {
         String s2=t2.getText().toString();
         String s3=t3.getText().toString();
         String s4=t4.getText().toString();
-        String s5=t5.getText().toString();
-        String s6=t6.getText().toString();
 
-        if(s1.equals("")&& s2.equals("") && s3.equals("") && s4.equals("") && s5.equals("") && s6.equals("")) {
+
+        if(s1.equals("")&& s2.equals("") && s3.equals("") && s4.equals("")) {
             btnRessai.setVisibility(View.VISIBLE);
         }
         else{
