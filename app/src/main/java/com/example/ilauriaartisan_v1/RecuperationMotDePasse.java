@@ -31,7 +31,7 @@ public class RecuperationMotDePasse extends AppCompatActivity {
 
 
     }
-    public void v(View view)
+    public void ressaiClicked(View view)
     {
         String s1=t1.getText().toString();
         String s2=t2.getText().toString();

@@ -140,7 +140,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="48dp"
         android:backgroundTint="#FFF"
-        android:onClick="v"
+        android:onClick="ressaiClicked"
         android:text="Code incorrecte,réessayer "
         android:textColor="#FF0000"
         >
