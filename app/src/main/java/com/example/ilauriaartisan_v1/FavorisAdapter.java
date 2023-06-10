@@ -21,9 +21,17 @@ public class FavorisAdapter extends BaseAdapter {
     LayoutInflater layoutInflater;
 
     public FavorisAdapter(Context context, ArrayList<String> FavoriList){
+
+
+
+
+
+
         this.context = context;
         this.FavoriList = FavoriList;
         this.layoutInflater=LayoutInflater.from(context);
+
+
     }
 
 
@@ -52,4 +60,8 @@ public class FavorisAdapter extends BaseAdapter {
         return convertView;
     }
 
+
+
 }
+
+

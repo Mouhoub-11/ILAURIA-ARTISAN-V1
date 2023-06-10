@@ -39,14 +39,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Favoris extends AppCompatActivity {
 
-   private FloatingActionButton galleryButton;
-
+    private FloatingActionButton BtnPhotoClient;
 
     private static final int REQUEST_PERMISSION = 1;
-    private static final int REQUEST_IMAGE_GALLERY = 2;
     private static final int GALLERY_REQ_CODE = 1000;
 
-    private ImageView imageView;
+    private ImageView imgClient;
 
     //
 
@@ -95,19 +93,17 @@ public class Favoris extends AppCompatActivity {
 
 
 
-        galleryButton = (FloatingActionButton) findViewById(R.id.edit_profile_picture_button);
+        BtnPhotoClient = (FloatingActionButton) findViewById(R.id.edit_profile_picture_button);
 
         Toolbar toolbar=findViewById(R.id.topAppBar);
 
-        imageView = (ImageView) findViewById(R.id.profile_picture);
+        imgClient = (ImageView) findViewById(R.id.profile_picture);
 
 
         /////////recycler
 
 
         ///
-
-
 
 
 
@@ -126,7 +122,7 @@ public class Favoris extends AppCompatActivity {
 
                         switch (itemId) {
 
-                            case R.id.btnSeDeco:
+                            case R.id.btnSeDecconnecter:
                                 sedecconecter();
                                 return true;
 
@@ -146,7 +142,7 @@ public class Favoris extends AppCompatActivity {
 
 
 
-        galleryButton.setOnClickListener(new View.OnClickListener() {
+        BtnPhotoClient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkPermissionAndOpenGallery();
@@ -187,7 +183,7 @@ public class Favoris extends AppCompatActivity {
 
             if (requestCode == GALLERY_REQ_CODE) {
 
-                imageView.setImageURI(data.getData());
+                imgClient.setImageURI(data.getData());
             }
         }
 
